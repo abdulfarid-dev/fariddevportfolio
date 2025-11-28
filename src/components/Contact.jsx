@@ -19,9 +19,24 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    // Reset form
+    // Minimal, client-side mailto: submission. Opens user's email client.
+    const recipient = 'abdulrrr78@gtmail.com';
+    const { name, email, subject, message } = formData;
+
+    // Basic validation: ensure fields are filled
+    if (!name || !email || !subject || !message) {
+      // Could show UI feedback here; keep minimal as requested
+      alert('Please fill in all fields before sending.');
+      return;
+    }
+
+    const bodyText = `Name: ${name}\nEmail: ${email}\n\n${message}`;
+    const mailto = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyText)}`;
+
+    // Open the user's email client with prefilled subject and body
+    window.location.href = mailto;
+
+    // Reset form (safe to clear immediately)
     setFormData({ name: '', email: '', subject: '', message: '' });
   };
 
@@ -29,14 +44,14 @@ const Contact = () => {
     {
       icon: <Mail className="w-6 h-6" />,
       title: "Email",
-      value: "abdulrrr78@gmail.com",
-      link: "mailto:abdulrrr78@gmail.com"
+      value: "abdulrrr78@gtmail.com",
+      link: "mailto:abdulrrr78@gtmail.com"
     },
     {
       icon: <Phone className="w-6 h-6" />,
       title: "Phone",
       value: "+9195050413",
-      link: "tel:+15551234567"
+      
     },
     {
       icon: <MapPin className="w-6 h-6" />,

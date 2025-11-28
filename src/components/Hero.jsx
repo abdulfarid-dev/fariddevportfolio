@@ -2,10 +2,17 @@ import React from 'react';
 import { Github, Linkedin, Mail, Download, ArrowDown } from 'lucide-react';
 import '../styles/Hero.css';
 import photo from '../assets/faridphoto.jpg';
-// import resume from "../assets/farid_cv.pdf";
+import farid_cv from "../assets/Farid_cv .pdf";
 
 
 const Hero = () => {
+  const handleDownloadResume = () => {
+    const link = document.createElement('a');
+    link.href = farid_cv;
+    link.download = 'Farid_cv.pdf';
+    link.click();
+  };
+
   return (
     <section id="home" className="hero">
       <div className="hero-container">
@@ -21,7 +28,7 @@ const Hero = () => {
             </p>
             
             <div className="hero-actions">
-              <button className="hero-btn">
+              <button className="hero-btn" onClick={handleDownloadResume}>
                 <Download className="w-5 h-5" />
                 <span>Download Resume</span>
               </button>
@@ -44,7 +51,7 @@ const Hero = () => {
                   <Linkedin className="hero-social-icon" />
                 </a>
                 <a
-                  href="abdulrrr78@gmail.com"
+                  href="mailto:abdulrrr78@gmail.com"
                   className="hero-social-link"
                 >
                   <Mail className="hero-social-icon" />
