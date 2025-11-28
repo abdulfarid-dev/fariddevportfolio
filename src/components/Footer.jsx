@@ -15,12 +15,12 @@ const Footer = () => {
           <div className="footer-made-with">
             <span>Made with</span>
             <Heart className="footer-heart" />
-            <span>by Alex</span>
+            <span>by Farid_dev</span>
           </div>
         </div>
         
         <div className="footer-divider">
-          <p>&copy; 2024 Alex Developer. All rights reserved.</p>
+          <p>&copy; 2025 Farid Developer. All rights reserved.</p>
         </div>
       </div>
     </footer>
