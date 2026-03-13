@@ -33,15 +33,15 @@ const Projects = () => {
       date: "2025"
     }
     ,
-    {
-      title: "Software Project Lead – AlhindMedicare",
-      description: "Led the end-to-end development and launch of a full-scale medical tourism platform connecting international patients with Indian hospitals. Built secure backend services, integrated MongoDB Atlas, managed SEO, and optimized digital marketing to grow online visibility.",
-      image: "https://www.pajasaapartments.com/wp-content/uploads/2024/05/Practice-Templates3-2025-05-02T145840.780.jpg",
-      technologies: ["Node.js", "Express", "JavaScript", "MongoDB Atlas", "EJS", "SEO"],
-      liveUrl: "https://alhindmedicare.com",
-      githubUrl: "",
-      date: "2025"
-    }
+     {
+  title: "Backend Developer – GlobalCare AI",
+  description: "Built an AI-powered medical tourism assistant backend that helps international patients find treatments, hospitals, and doctors in India. Implemented OpenAI-based chat, RAG with MongoDB vector search, and real-time human handoff using Socket.IO for sensitive support requests.",
+  image: "https://www.pajasaapartments.com/wp-content/uploads/2024/05/Practice-Templates3-2025-05-02T145840.780.jpg",
+  technologies: ["Node.js", "Express", "JavaScript", "MongoDB Atlas", "OpenAI API", "Socket.IO", "EJS"],
+  liveUrl: "",
+  githubUrl: "https://github.com/abdulfarid-dev/GlobalCareAi",
+  date: "2026"
+}
      
   ];
 
